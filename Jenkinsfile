@@ -10,7 +10,7 @@ pipeline {
 stage('Build & Test') {
     steps {
         echo 'Running ML pipeline...'
-        bat 'python ml_pipeline.py'
+        bat 'python Ml_pipeline.py'
 }
 }
 }
