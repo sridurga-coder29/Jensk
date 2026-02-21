@@ -5,14 +5,15 @@ pipeline {
             steps {
                 echo 'Installing dependencies...'
                 bat 'python -m pip install -r requirements.txt'
-}
-}
+                }
+                }
 stage('Build & Test') {
     steps {
         echo 'Running ML pipeline...'
         bat 'python Ml_pipeline.py'
-}
-}
+        }
+    }
+    
 }
 post {
     success {
@@ -20,6 +21,6 @@ post {
 }
 failure {
     echo 'Pipeline FAILED - Check logs'
-}
-}
+    }
+ }
 }
